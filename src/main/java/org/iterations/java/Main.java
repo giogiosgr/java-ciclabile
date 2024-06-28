@@ -28,7 +28,7 @@ public class Main {
         System.out.println(listaInteri.getElementoSuccessivo());
         System.out.println(listaInteri.getElementoSuccessivo());
         
-        // istanza del secondo oggetto, questa volta senza parametri
+        // istanza del secondo oggetto, questa volta partendo da un array vuoto
         Iterables secondaLista = new Iterables();
         
         // inizialmente non avrà elementi
