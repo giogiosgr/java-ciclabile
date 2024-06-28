@@ -2,9 +2,10 @@ package org.iterations.java;
 
 public class Iterables {
 	
-	int[] numbers;
-	int index;
+	private int[] numbers;
+	private int index;
 	
+	// costruttori
 	public Iterables(int[] numbers) {
 		this.numbers = numbers;
 	}
@@ -12,16 +13,47 @@ public class Iterables {
 	public Iterables() {
 		this.numbers = new int[0];
 	}
-
+ 
+	// metodi di base
 	public int getElementoSuccessivo() {
-		int storedValue = numbers[index];
+		int value = numbers[index];
         if (this.index < numbers.length) this.index++; 
-		return storedValue;
+		return value;
 	}
 	
 	public boolean hasAncoraElementi() {
 		return (this.index < numbers.length);
 	}
 	
+	/**
+	 * Metodo Bonus
+	 * 
+	 * @param newNumber
+	 */
+	public void addElemento(int newNumber) {
+		int[] newNumbers = new int[this.numbers.length + 1];
+		for (int i = 0; i < numbers.length; i++) {
+			newNumbers[i] = numbers[i];
+		}
+		newNumbers[numbers.length] = newNumber;
+		this.numbers = newNumbers;
+	}
 	
+    /**
+     * Getter che restituisce l'array
+     * 
+     * @return array di interi
+     */
+    public int[] getNumbers() {
+		return this.numbers;
+	}
+    
+    /**
+     * Getter che restituisce l'indice
+     * 
+     * @return indice
+     */
+    public int getIndex() {
+    	return this.index;
+    }
 }
