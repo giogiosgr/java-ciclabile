@@ -14,10 +14,13 @@ public class Iterables {
 		this.numbers = new int[0];
 	}
  
-	// metodi di base
+	// metodi principali
 	public int getElementoSuccessivo() {
-		int value = numbers[index];
-        if (this.index < numbers.length) this.index++; 
+        int value = 0;
+        if (this.index < numbers.length) {
+        	value = numbers[index];
+        	this.index++; 
+        }
 		return value;
 	}
 	
