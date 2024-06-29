@@ -41,7 +41,7 @@ public class Iterables {
 	 * @return true/false
 	 */
 	public boolean hasAncoraElementi() {
-		return (this.index < numbers.length);
+		return this.index < numbers.length;
 	}
 	
 	/**
